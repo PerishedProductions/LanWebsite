@@ -1,0 +1,126 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+}
+
+.nav {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.nav {
+    margin: 0;
+    padding: 0.25% 0 0.25% 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333333;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav li a {
+    color: white;
+    padding: 100% 0.875rem 100% 0.875rem;
+    text-align: center;
+    text-decoration: none;
+    font-family: arial black;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-left a {
+    font-size: 125%;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-right a {
+    font-size: 100%;    
+}
+
+.pull-right li a:hover {
+    background-color: #268c09;
+}
+
+.content {
+    margin: 0;
+    font-family: arial black;
+    text-align: left;
+    background-image: url(images/BG.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    padding: 5% 0 10% 0;
+}
+
+.indexInfo {
+    margin: 0 10% 0 10%;
+    background-color: #ffffff;
+}
+
+.infoHead {
+    background-color: #449905;
+    
+}
+
+.infoHead h1{
+    font-size: 35px;
+    margin: 0 0 0 5%;
+    color: #ffffff;
+}
+
+.infoContent {
+    margin: 0 50% 0 5%;
+	padding: 0 0 1% 0;
+}
+
+.infoContent p {
+    color: #222222;
+}
+
+.infoContent h3{
+    font-size: 20px;
+    margin: 0;
+}
+
+.footer {
+    background-color: #449905;
+    padding-top: 1%;
+    margin: auto;
+    width: 100%;
+}
+
+.row {
+    background-color: #333333;
+    float:left;
+    font-family: arial black;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.columns {
+    width: 33.33%;
+    float: left;
+}
+
+.columns ul {
+    list-style-type: none;
+}
+
+.columns a {
+    text-align: center;
+    text-decoration: none;
+    color: #aaaaaa;
+}
+
+.columns a:hover {
+    color: #555555;
+}
