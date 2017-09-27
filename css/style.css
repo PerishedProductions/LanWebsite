@@ -1,0 +1,37 @@
+#mainNav {
+    background-color: #F7920E;
+    height: 50px;
+}
+
+#mainNav a {
+    color: white;
+}
+
+#mainNav li:hover {
+    background-color: #F6AA46;
+}
+
+#content {
+    display: inline;
+    padding-top: 100px;
+}
+
+#content h1 {
+    color: #F7920E;
+    text-align: center;
+}
+
+#content hr {
+    width: 100%;
+    border: 1px solid #F7920E;
+}
+
+#content .text {
+    width: 49%;
+    padding-top: 50px;
+}
+
+#content .vid {
+    width: 49%;
+    padding-top: 50px;
+}
