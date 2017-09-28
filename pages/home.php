@@ -1,7 +1,7 @@
 <div class="container">
 <div class="row">
-<div class="col1"></div>
-<div class="col2" id="content"> 
+<div class="col"></div>
+<div class="col-12" id="content"> 
   <h1>Rybners LAN</h1>
   <hr>
   <div class="text float-left">
@@ -29,7 +29,7 @@
     </div>
   </div>
 </div>
-<div class="col3"></div>
+<div class="col"></div>
 </div>
 </div>
 
