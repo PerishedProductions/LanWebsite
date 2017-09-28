@@ -12,8 +12,10 @@
 }
 
 #content {
-    display: inline;
+    width: 100px;
+    /*display: inline;*/
     padding-top: 100px;
+    text-align: center;
 }
 
 #content h1 {
@@ -27,11 +29,11 @@
 }
 
 #content .text {
-    width: 49%;
+    /*width: 49%;*/
     padding-top: 50px;
 }
 
 #content .vid {
-    width: 49%;
+    /*width: 49%;*/
     padding-top: 50px;
 }

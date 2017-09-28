@@ -1,3 +1,13 @@
+<?php
+  $page = $_GET["page"];
+  if($page == null)
+  {
+    $newURL = "?page=home";
+    header('Location: '.$newURL);
+    die();
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,61 +21,50 @@
   </head>
   <body>
     <nav class="navbar navbar-light" id="mainNav">
-      <a class="navbar-brand" href="">Rybners LAN</a>
+      <a class="navbar-brand" href="?page=home">Rybners LAN</a>
       <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link active" href="#">Info</a>
+        <a class="nav-link active" href="?page=info">Info</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Booking</a>
+        <a class="nav-link" href="?page=booking">Booking</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Kontakt</a>
+        <a class="nav-link" href="?page=kontakt">Kontakt</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Nyheder</a>
+        <a class="nav-link" href="?page=nyheder">Nyheder</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Log ind</a>
+        <a class="nav-link" href="?page=login">Log ind</a>
       </li>
     </ul>
     </nav>
 
-    <div class="container">
-      <div class="row">
-      <div class="col1"></div>
-      <div class="col2" id="content"> 
-        <h1>Rybners LAN</h1>
-        <hr>
-        <div class="text float-left">
-          <p>
-          Rybners HTX LAN er en begivenhed der holder sted flere gange om året på 
-          rybners HTX. Formålet med det vores LAN er at bringe skolen sammen, og 
-          fjerne rammerne for alder. Det vil sige at vi holder et event for folk der har 
-          interesse for computer og computerspil, også selvom man går i 1 år kan man 
-          stadig godt spille med en fra 3 år.
-          <br><br>
-          Hvis du er ny inden for computerspil eller gerne vil være en del af det, så er 
-          Rybners LAN den perfekte metode at starte på. Fordi computerspil er ikke bare at 
-          skyde hinanden. det er et fællesskab af folk der er fuld af forskellige færdigheder.
-          <br><br>
-          Servere
-          Vi har en Discord server som kan blive brugt under begivenheden, for at 
-          kommunikere med andre der er med. Vores Discord server kan også blive 
-          brugt til hold som man laver til konkurrencerne.
-          </p>
-        </div>
-        <div class="vid float-right">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/gSJo-O-RvCM" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="col3"></div>
-      </div>
-    </div>
-
-    </div>
+    <?php
+        switch ($page) {
+          case "home":
+            include "pages/home.php";
+            break;
+          case "info":
+            include "pages/info.php";
+            break;
+          case "booking":
+            include "pages/booking.php";
+            break;
+          case "kontakt":
+            include "pages/kontakt.php";
+            break;
+          case "nyheder":
+            include "pages/nyheder.php";
+            break;
+          case "login":
+            include "pages/login.php";
+            break;
+          default:
+            include "pages/home.php";
+      }
+    ?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
