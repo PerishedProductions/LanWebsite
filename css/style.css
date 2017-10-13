@@ -12,7 +12,6 @@
 }
 
 #content {
-    
     padding-top: 100px;
 }
 
@@ -34,4 +33,14 @@
 #content .vid {
     width: 49%;
     padding-top: 50px;
+}
+
+.btn-orange {
+    color: white;
+    background-color: #F7920E;
+}
+
+.btn-orange:hover {
+    color: white;
+    background-color: #F6AA46;
 }

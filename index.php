@@ -1,4 +1,7 @@
 <?php
+
+  session_start();
+
   $page = $_GET["page"];
   if($page == null)
   {
@@ -15,13 +18,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" href="css/style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+   
   </head>
   <body>
     <nav class="navbar navbar-light" id="mainNav">
-      <a class="navbar-brand" href="?page=home">Rybners LAN</a>
+      <a class="navbar-brand" href="?page=home">
+      Rybners LAN
+      <?php if(isset($_SESSION['id']))
+      {
+        echo ' - Logged ind som '.$_SESSION['uid']; 
+      }
+      ?>
+      </a>
       <ul class="nav">
       <li class="nav-item">
         <a class="nav-link active" href="?page=info">Info</a>
@@ -36,7 +47,19 @@
         <a class="nav-link" href="?page=nyheder">Nyheder</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="?page=login">Log ind</a>
+
+        <?php
+          if(isset($_SESSION['id']))
+          {
+            echo '<a class="nav-link" href="logout.php">Log ud</a>'; 
+          }
+          else
+          {
+            echo '<a class="nav-link" href="?page=login">Log ind</a>'; 
+          }
+        ?>
+
+        
       </li>
     </ul>
     </nav>
@@ -60,6 +83,9 @@
             break;
           case "login":
             include "pages/login.php";
+            break;
+          case "signup":
+          include "pages/signup.php";
             break;
           default:
             include "pages/home.php";
