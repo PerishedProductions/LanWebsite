@@ -1,3 +1,7 @@
+body {
+    overflow:hidden;
+}
+
 #mainNav {
     background-color: #F7920E;
     height: 50px;

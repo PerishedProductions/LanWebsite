@@ -6,6 +6,13 @@
 
                 $alert = $_GET['alert'];
 
+                if($alert == null)
+                {
+                  $newURL = "?page=signup&alert=none";
+                  header('Location: '.$newURL);
+                  die();
+                }
+
                 switch($alert)
                 {
                     case "success":

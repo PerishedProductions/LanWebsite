@@ -4,6 +4,8 @@
         <div class="col-12" id="content">
             <?php
 
+                
+
                 $alert = $_GET['alert'];
 
                 if($alert == null)
@@ -39,6 +41,8 @@
                     </form>
                     <br>
                     <a href="?page=signup" class="btn btn-orange">Opret en ny bruger her</a>
+                    <br>
+                    <br>
                 </div>
                 <div class="col"></div>
             </div>

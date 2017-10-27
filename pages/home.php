@@ -31,5 +31,7 @@
     </div>
     <div class="col"></div>
     </div>
+    <br>
+    <a class="btn btn-orange" href="?page=booking" style="width: 100%;">Køb billet nu!</a>
   </div>
 </div>

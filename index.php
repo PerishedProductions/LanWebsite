@@ -24,7 +24,7 @@
    
   </head>
   <body>
-    <nav class="navbar navbar-light" id="mainNav">
+    <nav class="navbar navbar-light fixed-top" id="mainNav">
       <a class="navbar-brand" href="?page=home">
       Rybners LAN
       <?php if(isset($_SESSION['id']))
@@ -35,7 +35,7 @@
       </a>
       <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link active" href="?page=info">Info</a>
+        <a class="nav-link" href="?page=nyheder">Nyheder</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="?page=booking">Booking</a>
@@ -43,24 +43,30 @@
       <li class="nav-item">
         <a class="nav-link" href="?page=kontakt">Kontakt</a>
       </li>
+      
       <li class="nav-item">
-        <a class="nav-link" href="?page=nyheder">Nyheder</a>
-      </li>
-      <li class="nav-item">
-
         <?php
           if(isset($_SESSION['id']))
           {
-            echo '<a class="nav-link" href="logout.php">Log ud</a>'; 
+            echo '<a class="nav-link" href="?page=profile">Profil</a>';
           }
           else
           {
             echo '<a class="nav-link" href="?page=login">Log ind</a>'; 
           }
         ?>
-
-        
       </li>
+      
+      <?php
+          if(isset($_SESSION['id']) && $_SESSION['admin'])
+          {
+            echo '
+             <li class="nav-item">
+              <a class="nav-link" href="?page=kontakt">Admin Panel</a>
+             </li>
+            ';
+          }
+        ?>
     </ul>
     </nav>
 
@@ -75,6 +81,9 @@
           case "booking":
             include "pages/booking.php";
             break;
+        case "ticket":
+            include "pages/ticket.php";
+            break;
           case "kontakt":
             include "pages/kontakt.php";
             break;
@@ -85,8 +94,11 @@
             include "pages/login.php";
             break;
           case "signup":
-          include "pages/signup.php";
+            include "pages/signup.php";
             break;
+          case "profile":
+            include "pages/profile.php";
+            break;  
           default:
             include "pages/home.php";
       }

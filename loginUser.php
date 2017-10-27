@@ -33,6 +33,7 @@
                 $_SESSION['first'] = $row['first'];
                 $_SESSION['last'] = $row['last'];
                 $_SESSION['uid'] = $row['uid'];
+                $_SESSION['admin'] = $row['admin'];
 
                 mysqli_close($conn);
                 header("Location: index.php");
